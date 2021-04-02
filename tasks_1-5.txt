@@ -1,0 +1,5 @@
+1)Select model, speed, hd from PC where price <500
+2)Select distinct maker from Product where type = 'printer'
+3)Select model,ram,screen from Laptop where price >1000
+4)Select * from Printer where color ='y'
+5)Select model,speed ,hd   from PC where (cd  = '12x' or cd = '24x') and price < 600
