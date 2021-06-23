@@ -1,0 +1,23 @@
+6) select DISTINCT Maker, Speed from Product p join Laptop l on p.model=l.model
+where hd>=10
+7)Select p.model, pc.price from Product p join PC pc
+on p.model = pc.model where p.maker ='B'
+UNION 
+Select p.model , l.price from Product p join Laptop l
+ON p.model = l.model where p.maker ='B'
+UNION 
+Select p.model,pr.price from Product p join Printer pr 
+On p.model=pr.model where p.maker ='B'
+8)Select DISTINCT maker
+from Product 
+where type = 'PC'
+EXCEPT
+Select DISTINCT maker
+from Product 
+where type = 'Laptop'
+9)Select DISTINCT maker 
+from  Product p JOIN PC pc on (p.model = pc.model)
+where pc.speed >= '450'
+10)select model,  price
+from Printer
+where price = (SELECT MAX(price) from printer)
